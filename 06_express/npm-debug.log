@@ -1,0 +1,76 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'info' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 silly mapToRegistry name firstsite
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry data Result {
+7 silly mapToRegistry   raw: 'firstsite',
+7 silly mapToRegistry   scope: null,
+7 silly mapToRegistry   name: 'firstsite',
+7 silly mapToRegistry   rawSpec: '',
+7 silly mapToRegistry   spec: 'latest',
+7 silly mapToRegistry   type: 'tag' }
+8 silly mapToRegistry uri https://registry.npmjs.org/firstsite
+9 verbose request uri https://registry.npmjs.org/firstsite
+10 verbose request no auth needed
+11 info attempt registry request try #1 at 15:44:19
+12 verbose request id 17968539a0f87009
+13 http request GET https://registry.npmjs.org/firstsite
+14 http 404 https://registry.npmjs.org/firstsite
+15 verbose headers { 'content-type': 'application/json',
+15 verbose headers   'cache-control': 'max-age=0',
+15 verbose headers   'content-length': '2',
+15 verbose headers   'accept-ranges': 'bytes',
+15 verbose headers   date: 'Sat, 14 May 2016 07:44:32 GMT',
+15 verbose headers   via: '1.1 varnish',
+15 verbose headers   age: '0',
+15 verbose headers   connection: 'keep-alive',
+15 verbose headers   'x-served-by': 'cache-itm7425-ITM',
+15 verbose headers   'x-cache': 'MISS',
+15 verbose headers   'x-cache-hits': '0',
+15 verbose headers   'x-timer': 'S1463211871.311353,VS0,VE737',
+15 verbose headers   vary: 'Accept-Encoding' }
+16 silly get cb [ 404,
+16 silly get   { 'content-type': 'application/json',
+16 silly get     'cache-control': 'max-age=0',
+16 silly get     'content-length': '2',
+16 silly get     'accept-ranges': 'bytes',
+16 silly get     date: 'Sat, 14 May 2016 07:44:32 GMT',
+16 silly get     via: '1.1 varnish',
+16 silly get     age: '0',
+16 silly get     connection: 'keep-alive',
+16 silly get     'x-served-by': 'cache-itm7425-ITM',
+16 silly get     'x-cache': 'MISS',
+16 silly get     'x-cache-hits': '0',
+16 silly get     'x-timer': 'S1463211871.311353,VS0,VE737',
+16 silly get     vary: 'Accept-Encoding' } ]
+17 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/firstsite
+17 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+17 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+17 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+17 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:199:22)
+17 verbose stack     at emitTwo (events.js:106:13)
+17 verbose stack     at Request.emit (events.js:191:7)
+17 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1036:10)
+17 verbose stack     at emitOne (events.js:101:20)
+17 verbose stack     at Request.emit (events.js:188:7)
+17 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:963:12)
+18 verbose statusCode 404
+19 verbose pkgid firstsite
+20 verbose cwd C:\Users\Student\Desktop\NodeJS-iii\06_express
+21 error Windows_NT 6.1.7601
+22 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "info"
+23 error node v6.1.0
+24 error npm  v3.8.6
+25 error code E404
+26 error 404 Registry returned 404 for GET on https://registry.npmjs.org/firstsite
+27 error 404
+28 error 404 'firstsite' is not in the npm registry.
+29 error 404 You should bug the author to publish it (or use the name yourself!)
+30 error 404 Note that you can also install from a
+31 error 404 tarball, folder, http url, or git url.
+32 verbose exit [ 1, true ]
