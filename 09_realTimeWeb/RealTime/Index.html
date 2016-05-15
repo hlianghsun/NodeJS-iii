@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Socket.IO Client</title>
+</head>
+<body>
+    <h1>Socket.IO Client</h1>
+    <input type="text" id="textMessage" />
+    <input type="button" value="send" id="buttonSend" />
+    <div id="div1"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect();
+        var myDiv = document.getElementById("div1");
+
+        //接收Server端傳過來的資料
+        socket.on("message", function (data) {
+            myDiv.innerHTML += data + "<br>";
+        })
+
+        document.getElementById("buttonSend").onclick = function () {
+            var data = document.getElementById("textMessage").value;
+
+            //發送訊息到Server端
+            socket.emit("message", data);
+        }
+
+    </script>
+</body>
+</html>

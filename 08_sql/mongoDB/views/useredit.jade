@@ -1,0 +1,22 @@
+extends justified-nav
+
+block content
+  h1= title
+
+  form#userform(method="post" action="/users/edit/#{user.id}" class="form-horizontal")
+    div.form-group
+      label(for="name" class="col-sm-2 control-label") name:
+      div.col-sm-10
+        input#name(type="text" name="name" class="form-control" value="#{user.name}")
+    div.form-group
+      label(for="email" class="col-sm-2 control-label") email:
+      div.col-sm-10
+        input#email(type="email" name="email" class="form-control" value="#{user.email}")  
+    div.form-group
+      label(for="age" class="col-sm-2 control-label") age:
+      div.col-sm-10
+        input#age(type="number" name="age" class="form-control" value="#{user.age}")   
+    div.form-group
+      div(class="col-sm-offset-2 col-sm-2")
+        button.btn-primary(type="submit")
+          span.glyphicon.glyphicon-ok

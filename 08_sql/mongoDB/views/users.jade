@@ -1,0 +1,29 @@
+﻿extends justified-nav
+block content
+  h1#myH= title
+  p Welcome to  #{title}
+  div
+    a(href="/users/add" class="btn-primary btn-sm") 新增 
+      span.glyphicon.glyphicon-user
+  br
+  table(class="table table-bordered table-hover")
+    thead
+      tr
+        th #
+        th 姓名
+        th 電子郵件
+        th 年紀
+        th 編輯
+    tbody
+      each user in users
+       tr
+        td #{user.id}
+        td #{user.name}
+        td #{user.email}
+        td #{user.age}
+        td
+          a(href="/users/edit/#{user.id}" class="btn-primary btn-sm") 編輯 
+              span.glyphicon.glyphicon-pencil 
+
+          a(href="/users/delete/#{user.id}" class="btn-danger btn-sm") 刪除 
+              span.glyphicon.glyphicon-trash

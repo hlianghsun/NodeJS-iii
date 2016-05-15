@@ -1,14 +1,19 @@
 {
-  "name": "firstsite",
+  "name": "firstexpresssite",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "express ",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "hsun",
+  "keywords": [
+    "express",
+    "site"
+  ],
+  "author": "Wang",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.4.1",
     "express": "^4.13.4"
   }
 }

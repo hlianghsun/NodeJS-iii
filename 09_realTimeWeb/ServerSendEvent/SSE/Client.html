@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Sent Event</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <input type="button" id="stopButton" value="停止" />
+    <hr />
+    <div id="content"></div>
+    <script>
+        var source = new EventSource('/events');
+        source.addEventListener('open', function (e) {
+            document.getElementById('content').innerHTML += '已連線..<br/>';
+        });
+        //source.addEventListener('connecttime', function (e) {
+        //    document.getElementById('content').innerHTML += "connecttime：" + e.data + '<br/>';
+        //});
+        source.addEventListener('message', function (e) {
+            document.getElementById('content').innerHTML = e.data + '<br/>';
+        });
+
+source.addEventListener('error', function (e) {
+	switch (e.target.readyState) {
+		case EventSource.CONNECTING:
+			stat = "等待重新連線";
+			break;
+		case EventSource.CLOSED:
+			stat = "連線失敗，停止連線";
+			break;
+	}
+	document.getElementById("content").innerHTML += stat + "<br/>";
+})
+
+
+        document.getElementById('stopButton').onclick = function () {
+            document.getElementById('content').innerHTML += '停止連線..<br/>';
+            source.close();
+        }
+    </script>
+</body>
+</html>
